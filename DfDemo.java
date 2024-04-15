@@ -39,7 +39,7 @@ public class DfDemo {
         if (obj.createNewFile()) {
           System.out.println("File Created! "+ obj.getName());
         } else {
-          System.out.println("file exists");
+          System.out.println("File Exists");
         }
 
       }
@@ -51,19 +51,19 @@ public class DfDemo {
 
       FileWriter writer=new FileWriter("myfile.txt");
       try{
-        writer.write(" The Available file System are  : ");
+        writer.write(" The Available file System are  :\n ");
 
         for (String s : calculate(files,calculateAvailable))
         {
        writer.write(s);
-       writer.write(", ");
+       writer.write("\n");
         }
 
-        writer.write("Used file systems are : ");
+        writer.write("Used file systems are :\n ");
         for (String s : calculate(files,calculateUsed))
         {
           writer.write(s);
-          writer.write(", ");
+          writer.write("\n ");
         }
 
         writer.close();
